@@ -13,19 +13,34 @@ body {
     min-height: 100vh;
 }
 
-/* Header & Navigation */
+/* Header & Navigation with Logo Container */
 header {
     background-color: #2e7d32;
     color: white;
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #1b5e20;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.college-logo {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 2px;
+    object-fit: contain;
+}
+
 header h1 {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 nav a {
@@ -78,7 +93,7 @@ aside h3 {
     background-color: #81c784;
 }
 
-/* Main Content Section */
+/* Main Content Area */
 main {
     flex: 1;
     padding: 30px;
