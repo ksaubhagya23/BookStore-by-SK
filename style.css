@@ -1,4 +1,3 @@
-/* Central Stylesheet - Green Theme & Layout */
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -13,7 +12,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header & Navigation with Logo Container */
 header {
     background-color: #2e7d32;
     color: white;
@@ -21,6 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
     border-bottom: 3px solid #1b5e20;
 }
 
@@ -33,39 +32,43 @@ header {
 .college-logo {
     width: 45px;
     height: 45px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 2px;
     object-fit: contain;
+    background-color: white;
 }
 
 header h1 {
     font-size: 22px;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
     font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
 }
 
-/* Page Layout */
 .main-container {
     display: flex;
     flex: 1;
 }
 
-/* Categories Sidebar */
 aside {
     width: 250px;
+    flex-shrink: 0;
     background-color: #4caf50;
     padding: 20px 15px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 aside h3 {
@@ -80,27 +83,45 @@ aside h3 {
     padding: 12px;
     margin-bottom: 12px;
     background-color: #a5d6a7;
-    border: none;
     border-radius: 6px;
     font-weight: bold;
     color: #1b5e20;
-    cursor: pointer;
     text-align: center;
     text-decoration: none;
 }
 
-.category-btn:hover {
+.category-btn:hover,
+.category-btn:focus {
     background-color: #81c784;
 }
 
-/* Main Content Area */
 main {
     flex: 1;
+    min-width: 0;
     padding: 30px;
     background-color: #ffffff;
 }
 
-/* Forms */
+.intro {
+    margin: 15px 0;
+}
+
+.action-link,
+.empty-message a {
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.auth-notice,
+.demo-notice {
+    margin: 16px 0;
+    padding: 12px;
+    background-color: #fff8e1;
+    border: 1px solid #ffecb3;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
 .form-container {
     max-width: 500px;
     margin: 0 auto;
@@ -120,24 +141,41 @@ main {
     margin-bottom: 15px;
 }
 
-.form-group label {
+.form-group label,
+.form-group legend {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input:not([type="radio"]):not([type="checkbox"]),
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #a5d6a7;
     border-radius: 4px;
 }
 
-.radio-group, .checkbox-group {
+fieldset.form-group {
+    border: 0;
+}
+
+.radio-group,
+.checkbox-group {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px 15px;
     margin-top: 5px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
 }
 
 .btn-submit {
@@ -152,18 +190,29 @@ main {
     cursor: pointer;
 }
 
-.btn-submit:hover {
+.btn-submit:hover,
+.btn-submit:focus {
     background-color: #1b5e20;
 }
 
-/* Tables */
+.page-heading {
+    text-align: center;
+    color: #2e7d32;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #a5d6a7;
     padding: 10px;
     text-align: center;
@@ -179,7 +228,11 @@ tr:nth-child(even) {
     background-color: #e8f5e9;
 }
 
-/* Book Cover Images */
+.book-title {
+    color: #1b5e20;
+    font-weight: bold;
+}
+
 .book-img {
     width: 60px;
     height: 80px;
@@ -204,8 +257,15 @@ tr:nth-child(even) {
     background-color: #e53935;
 }
 
-.action-btn:hover {
+.action-btn:hover,
+.action-btn:focus {
     opacity: 0.9;
+}
+
+.quantity-input {
+    width: 70px;
+    padding: 6px;
+    text-align: center;
 }
 
 .total-price {
@@ -216,7 +276,28 @@ tr:nth-child(even) {
     color: #1b5e20;
 }
 
-/* Footer */
+.empty-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.status-message {
+    margin-top: 12px;
+    color: #1b5e20;
+    line-height: 1.5;
+}
+
+.checkout-area {
+    max-width: 520px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.checkout-button {
+    width: auto;
+    padding: 10px 30px;
+}
+
 footer {
     background-color: #2e7d32;
     color: white;
@@ -224,4 +305,31 @@ footer {
     padding: 10px;
     font-weight: bold;
     border-top: 2px solid #1b5e20;
+}
+
+@media (max-width: 760px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+    }
 }

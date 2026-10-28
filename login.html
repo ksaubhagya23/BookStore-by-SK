@@ -7,43 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <div class="header-left">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='white' stroke='%232e7d32' stroke-width='4'/><circle cx='50' cy='50' r='38' fill='none' stroke='%232e7d32' stroke-width='2'/><path d='M50 25 L60 45 L40 45 Z' fill='%232e7d32'/><text x='50' y='65' fill='%231b5e20' font-size='12' font-family='Arial' font-weight='bold' text-anchor='middle'>GL BAJAJ</text></svg>" alt="GL Bajaj Logo" class="college-logo">
+            <img src="assets/gl-bajaj-logo.png" alt="GL Bajaj logo" class="college-logo">
             <h1>G.L. Bajaj Online Book Store</h1>
         </div>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="login.html">Login</a> | 
-            <a href="register.html">Register</a> | 
-            <a href="catalogue.html">Catalogue</a> | 
-            <a href="cart.html">Cart</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="login.html" aria-current="page">Login</a>
+            <a href="registration.html">Register</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
         </nav>
     </header>
 
     <div class="main-container">
         <aside>
             <h3>Categories</h3>
-            <a href="catalogue.html" class="category-btn">CSE Books</a>
-            <a href="catalogue.html" class="category-btn">ECE Books</a>
-            <a href="catalogue.html" class="category-btn">Mechanical Books</a>
+            <a href="catalogue.html?category=cse" class="category-btn">CSE Books</a>
+            <a href="catalogue.html?category=ece" class="category-btn">ECE Books</a>
+            <a href="catalogue.html?category=mechanical" class="category-btn">Mechanical Books</a>
         </aside>
-
         <main>
             <div class="form-container">
                 <h2>Login Page</h2>
-                <form action="catalogue.html" method="get">
+
+                <div id="login-form">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="username">Email</label>
+                        <input type="email" id="username" name="email" autocomplete="username" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password" autocomplete="current-password" required>
                     </div>
-                    <button type="submit" class="btn-submit">Login</button>
-                </form>
+                    <button type="button" class="btn-submit" id="login-button">Login (demo)</button>
+                    <p id="store-message" class="status-message" role="status" aria-live="polite"></p>
+                </div>
             </div>
         </main>
     </div>
@@ -51,6 +51,6 @@
     <footer>
         <p>Created by Saubhagya Kumar | Roll no. 2501920110336</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+  <rect width="300" height="400" fill="#17324d"/>
+  <rect x="18" y="18" width="264" height="364" rx="8" fill="none" stroke="#61c0bf" stroke-width="3"/>
+  <path d="M75 128h150M75 157h150M75 186h95" stroke="#61c0bf" stroke-width="8" stroke-linecap="round"/>
+  <text x="150" y="244" fill="#fff" font-family="Arial,sans-serif" font-size="27" font-weight="bold" text-anchor="middle">COMPUTER</text>
+  <text x="150" y="278" fill="#fff" font-family="Arial,sans-serif" font-size="27" font-weight="bold" text-anchor="middle">SCIENCE</text>
+  <text x="150" y="331" fill="#b9e6e5" font-family="Arial,sans-serif" font-size="14" text-anchor="middle">ROBERT SEDGEWICK</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+  <rect width="300" height="400" fill="#3c3a64"/>
+  <rect x="18" y="18" width="264" height="364" rx="8" fill="none" stroke="#f1ca68" stroke-width="3"/>
+  <path d="M65 145h34l15-44 27 88 27-88 27 88 15-44h25" fill="none" stroke="#f1ca68" stroke-width="7" stroke-linejoin="round"/>
+  <text x="150" y="253" fill="#fff" font-family="Arial,sans-serif" font-size="24" font-weight="bold" text-anchor="middle">SIGNALS AND</text>
+  <text x="150" y="285" fill="#fff" font-family="Arial,sans-serif" font-size="27" font-weight="bold" text-anchor="middle">SYSTEMS</text>
+  <text x="150" y="335" fill="#f8e6ac" font-family="Arial,sans-serif" font-size="13" text-anchor="middle">ALAN V. OPPENHEIM</text>
+</svg>

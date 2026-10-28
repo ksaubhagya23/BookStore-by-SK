@@ -7,65 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <div class="header-left">
-            <img src="https://www.glbitm.org/images/logo.png" alt="GL Bajaj Logo" class="college-logo">
+            <img src="assets/gl-bajaj-logo.png" alt="GL Bajaj logo" class="college-logo">
             <h1>G.L. Bajaj Online Book Store</h1>
         </div>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="login.html">Login</a> | 
-            <a href="register.html">Register</a> | 
-            <a href="catalogue.html">Catalogue</a> | 
-            <a href="cart.html">Cart</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Register</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
         </nav>
     </header>
 
     <div class="main-container">
         <aside>
             <h3>Categories</h3>
-            <a href="catalogue.html" class="category-btn">CSE Books</a>
-            <a href="catalogue.html" class="category-btn">ECE Books</a>
-            <a href="catalogue.html" class="category-btn">Mechanical Books</a>
+            <a href="catalogue.html?category=cse" class="category-btn">CSE Books</a>
+            <a href="catalogue.html?category=ece" class="category-btn">ECE Books</a>
+            <a href="catalogue.html?category=mechanical" class="category-btn">Mechanical Books</a>
         </aside>
-
         <main>
-            <h2 style="text-align: center; color: #2e7d32;">Your Shopping Cart</h2>
-
-            <table>
-                <tr>
-                    <th>Book Image</th>
-                    <th>Book Name</th>
-                    <th>Author</th>
-                    <th>Price</th>
-                    <th>Amount</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td><img src="https://m.media-amazon.com/images/I/71g2ednj0JL._AC_UY218_.jpg" alt="Computer Science" class="book-img"></td>
-                    <td><a href="https://www.amazon.in/Computer-Science-Book-complete-introduction-ebook/dp/B08L258P2P" target="_blank" style="color: #2e7d32; font-weight: bold; text-decoration: none;">Computer Science</a></td>
-                    <td>Robert Sedgewick</td>
-                    <td>Rs. 4000</td>
-                    <td><input type="number" value="2" min="1" style="width: 50px; text-align: center;"></td>
-                    <td><button class="action-btn remove" onclick="alert('Item removed!')">Remove</button></td>
-                </tr>
-                <tr>
-                    <td><img src="https://m.media-amazon.com/images/I/71u9t2L0qFL._AC_UY218_.jpg" alt="Artificial Intelligence" class="book-img"></td>
-                    <td><a href="https://khannabooks.com/product/introduction-to-ai-machine-learning/?srsltid=AYCX9vJcQ9PrInMWr0zmaeqeiOsCBOhVzjlgZH8xqxZD7g5jAzj_SGCM" target="_blank" style="color: #2e7d32; font-weight: bold; text-decoration: none;">Artificial Intelligence</a></td>
-                    <td>Charu C. Agarwal</td>
-                    <td>Rs. 5000</td>
-                    <td><input type="number" value="1" min="1" style="width: 50px; text-align: center;"></td>
-                    <td><button class="action-btn remove" onclick="alert('Item removed!')">Remove</button></td>
-                </tr>
-            </table>
-
-            <div class="total-price">
-                Total Price: Rs. 13,000
+            <h2 class="page-heading">Your Shopping Cart</h2>
+            <p id="store-message" class="status-message" role="status" aria-live="polite"></p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Book Image</th>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-books"></tbody>
+                </table>
             </div>
+            <p id="empty-cart" class="empty-message" hidden>Your cart is empty. <a href="catalogue.html">Browse the catalogue</a>.</p>
+            <p class="total-price">Total Price: <span id="cart-total">Rs. 0</span></p>
+            <div class="checkout-area">
 
-            <div style="text-align: center; margin-top: 20px;">
-                <button class="btn-submit" style="width: auto; padding: 10px 30px;" onclick="alert('Proceeding to Checkout...')">Proceed to Checkout</button>
+                <button type="button" class="btn-submit checkout-button" id="checkout-button">Proceed to demo checkout</button>
+                <p id="checkout-message" class="status-message" role="status" aria-live="polite"></p>
             </div>
         </main>
     </div>
@@ -73,7 +59,6 @@
     <footer>
         <p>Created by Saubhagya Kumar | Roll no. 2501920110336</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
