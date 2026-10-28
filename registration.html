@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - G.L. Bajaj Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>G.L. Bajaj Online Book Store</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="login.html">Login</a> | 
+            <a href="register.html">Register</a> | 
+            <a href="catalogue.html">Catalogue</a> | 
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside>
+            <h3>Categories</h3>
+            <a href="catalogue.html" class="category-btn">CSE Books</a>
+            <a href="catalogue.html" class="category-btn">ECE Books</a>
+            <a href="catalogue.html" class="category-btn">Mechanical Books</a>
+        </aside>
+
+        <main>
+            <div class="form-container">
+                <h2>Registration Page</h2>
+                <form action="login.html" method="get">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Sex</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="sex" value="male"> Male</label>
+                            <label><input type="radio" name="sex" value="female"> Female</label>
+                            <label><input type="radio" name="sex" value="other"> Other</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth:</label>
+                        <div style="display: flex; gap: 5px;">
+                            <select><option>Day</option></select>
+                            <select><option>Month</option></select>
+                            <select><option>Year</option></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Languages Known:</label>
+                        <div class="checkbox-group" style="flex-direction: column; gap: 5px;">
+                            <label><input type="checkbox"> English</label>
+                            <label><input type="checkbox"> Hindi</label>
+                            <label><input type="checkbox"> Telugu</label>
+                            <label><input type="checkbox"> Tamil</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea rows="3" placeholder="Enter your address here"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Register</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Created by Saubhagya Kumar | Roll no. 2501920110336</p>
+    </footer>
+
+</body>
+</html>
