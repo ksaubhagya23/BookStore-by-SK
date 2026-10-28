@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalogue - G.L. Bajaj Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>G.L. Bajaj Online Book Store</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="login.html">Login</a> | 
+            <a href="register.html">Register</a> | 
+            <a href="catalogue.html">Catalogue</a> | 
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside>
+            <h3>Categories</h3>
+            <a href="catalogue.html" class="category-btn">CSE Books</a>
+            <a href="catalogue.html" class="category-btn">ECE Books</a>
+            <a href="catalogue.html" class="category-btn">Mechanical Books</a>
+        </aside>
+
+        <main>
+            <h2 style="text-align: center; color: #2e7d32;">Book Catalogue</h2>
+            
+            <table>
+                <tr>
+                    <th>Book Image</th>
+                    <th>Book Name</th>
+                    <th>Author Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/60x80/2e7d32/ffffff?text=CS+Book" alt="Computer Science" class="book-img"></td>
+                    <td><a href="https://www.amazon.in/Computer-Science-Book-complete-introduction-ebook/dp/B08L258P2P" target="_blank" style="color: #2e7d32; font-weight: bold; text-decoration: none;">Computer Science</a></td>
+                    <td>Robert Sedgewick</td>
+                    <td>Rs. 4000</td>
+                    <td><button class="action-btn" onclick="addToCart('Computer Science', 4000)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/60x80/2e7d32/ffffff?text=OS+Book" alt="Operating System" class="book-img"></td>
+                    <td><a href="https://www.amazon.in/Operating-System-Concepts-Abraham-Silberschatz/dp/1119800366" target="_blank" style="color: #2e7d32; font-weight: bold; text-decoration: none;">Operating System Concepts</a></td>
+                    <td>Dr. Ikvinderpal Singh</td>
+                    <td>Rs. 3800</td>
+                    <td><button class="action-btn" onclick="addToCart('Operating System Concepts', 3800)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/60x80/2e7d32/ffffff?text=DBMS" alt="Database System" class="book-img"></td>
+                    <td><a href="https://www.amazon.in/Database-Management-Systems-Rajiv-Chopra/dp/9385676342?s=bazaar" target="_blank" style="color: #2e7d32; font-weight: bold; text-decoration: none;">Database System Concepts</a></td>
+                    <td>Abraham Silberschatz</td>
+                    <td>Rs. 2500</td>
+                    <td><button class="action-btn" onclick="addToCart('Database System Concepts', 2500)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/60x80/2e7d32/ffffff?text=AI+Book" alt="Artificial Intelligence" class="book-img"></td>
+                    <td><a href="https://khannabooks.com/product/introduction-to-ai-machine-learning/?srsltid=AYCX9vJcQ9PrInMWr0zmaeqeiOsCBOhVzjlgZH8xqxZD7g5jAzj_SGCM" target="_blank" style="color: #2e7d32; font-weight: bold; text-decoration: none;">Artificial Intelligence</a></td>
+                    <td>Charu C. Agarwal</td>
+                    <td>Rs. 5000</td>
+                    <td><button class="action-btn" onclick="addToCart('Artificial Intelligence', 5000)">Add to Cart</button></td>
+                </tr>
+            </table>
+        </main>
+    </div>
+
+    <footer>
+        <p>Created by Saubhagya Kumar | Roll no. 2501920110336</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
