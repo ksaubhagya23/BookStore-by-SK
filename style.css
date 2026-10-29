@@ -1,335 +1,119 @@
 * {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Question 8.1 & 8.2: Base Body Styles, Custom Fonts, and Background Image */
 body {
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333333;
+  background-color: #f4f4f4;
+  /* Setting a background image for the page */
+  background-image: url("assets/page-bg.jpg");
+  background-attachment: fixed;
+  /* Question 9.1: Controlling background repetition */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    background-color: #2e7d32;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    border-bottom: 3px solid #1b5e20;
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 3px solid #1b5e20;
 }
 
 .header-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .college-logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    background-color: white;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  background-color: white;
 }
 
 header h1 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
 }
 
+/* Question 8.2 & 9.1: Main container styling with single element background image */
+.main-container {
+  display: flex;
+  flex: 1;
+  background-image: url("assets/container-pattern.png");
+  background-repeat: repeat;
+}
+
+aside {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: #4caf50;
+  padding: 20px 15px;
+}
+
+/* ==========================================
+   LINK STYLES & PSEUDO-CLASSES (Questions 8 & 9.2)
+   ========================================== */
+
+/* Default Link State */
+a:link {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* Visited Link State */
+a:visited {
+  color: #551a8b;
+}
+
+/* Hover Link State */
+a:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+/* Active Link State */
+a:active {
+  color: #ff9800;
+}
+
+/* Navigation specific link overrides */
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:link,
+nav a:visited {
+  color: white;
 }
 
 nav a:hover,
 nav a:focus {
-    text-decoration: underline;
+  color: #e8f5e9;
+  text-decoration: underline;
 }
 
-.main-container {
-    display: flex;
-    flex: 1;
-}
-
-aside {
-    width: 250px;
-    flex-shrink: 0;
-    background-color: #4caf50;
-    padding: 20px 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-aside h3 {
-    text-align: center;
-    margin-bottom: 15px;
-    color: white;
-}
-
-.category-btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    background-color: #a5d6a7;
-    border-radius: 6px;
-    font-weight: bold;
-    color: #1b5e20;
-    text-align: center;
-    text-decoration: none;
-}
-
-.category-btn:hover,
-.category-btn:focus {
-    background-color: #81c784;
-}
-
-main {
-    flex: 1;
-    min-width: 0;
-    padding: 30px;
-    background-color: #ffffff;
-}
-
-.intro {
-    margin: 15px 0;
-}
-
-.action-link,
-.empty-message a {
-    color: #1b5e20;
-    font-weight: bold;
-}
-
-.auth-notice,
-.demo-notice {
-    margin: 16px 0;
-    padding: 12px;
-    background-color: #fff8e1;
-    border: 1px solid #ffecb3;
-    border-radius: 4px;
-    line-height: 1.5;
-}
-
-.form-container {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #e8f5e9;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #c8e6c9;
-}
-
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2e7d32;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label,
-.form-group legend {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-group input:not([type="radio"]):not([type="checkbox"]),
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #a5d6a7;
-    border-radius: 4px;
-}
-
-fieldset.form-group {
-    border: 0;
-}
-
-.radio-group,
-.checkbox-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 15px;
-    margin-top: 5px;
-}
-
-.radio-group label,
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: normal;
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 10px;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn-submit:hover,
-.btn-submit:focus {
-    background-color: #1b5e20;
-}
-
-.page-heading {
-    text-align: center;
-    color: #2e7d32;
-}
-
-.table-wrap {
-    width: 100%;
-    overflow-x: auto;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-}
-
-th,
-td {
-    border: 1px solid #a5d6a7;
-    padding: 10px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-th {
-    background-color: #2e7d32;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #e8f5e9;
-}
-
-.book-title {
-    color: #1b5e20;
-    font-weight: bold;
-}
-
-.book-img {
-    width: 60px;
-    height: 80px;
-    object-fit: cover;
-    border: 1px solid #2e7d32;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto;
-}
-
-.action-btn {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.action-btn.remove {
-    background-color: #e53935;
-}
-
-.action-btn:hover,
-.action-btn:focus {
-    opacity: 0.9;
-}
-
-.quantity-input {
-    width: 70px;
-    padding: 6px;
-    text-align: center;
-}
-
-.total-price {
-    text-align: right;
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b5e20;
-}
-
-.empty-message {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.status-message {
-    margin-top: 12px;
-    color: #1b5e20;
-    line-height: 1.5;
-}
-
-.checkout-area {
-    max-width: 520px;
-    margin: 20px auto 0;
-    text-align: center;
-}
-
-.checkout-button {
-    width: auto;
-    padding: 10px 30px;
-}
-
-footer {
-    background-color: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    border-top: 2px solid #1b5e20;
-}
-
-@media (max-width: 760px) {
-    header {
-        flex-direction: column;
-    }
-
-    header h1 {
-        font-size: 19px;
-    }
-
-    .main-container {
-        flex-direction: column;
-    }
-
-    aside {
-        width: 100%;
-    }
-
-    main {
-        padding: 20px 12px;
-    }
-
-    th,
-    td {
-        padding: 7px;
-    }
+nav a:active {
+  color: #c8e6c9;
 }
